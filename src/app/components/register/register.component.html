@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<mat-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Datos personales </ng-template>
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input
+          matInput
+          placeholder="Nombre completo"
+          formControlName="nombre"
+          required
+        />
+      </mat-form-field>
+
+      <div>
+        <button mat-button matStepperNext>Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" label="Datos Personales">
+    <form [formGroup]="secondFormGroup">
+      <mat-form-field appearance="fill">
+        <mat-label>Correo electrónico</mat-label>
+        <input matInput formControlName="correo" required />
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Volver</button>
+        <button mat-button matStepperNext>Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="thirdFormGroup" label="Guardar">
+    <form [formGroup]="thirdFormGroup">
+      <mat-form-field appearance="fill">
+        <mat-label>Cédula</mat-label>
+        <input matInput formControlName="cedula" required />
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Volver</button>
+        <button mat-button matStepperNext (click)="addClient()">Guardar</button>
+      </div>
+    </form>
+  </mat-step>
+</mat-stepper>

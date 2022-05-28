@@ -1,0 +1,47 @@
+.container_form {
+  position: relative;
+  background-color: #8c9494c9;
+  border-radius: 10px;
+  height: 60vh;
+  width: 140vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -95px;
+  left: 230px;
+}
+
+#fecha {
+  display: block;
+  background-color: white ;
+  height: 50px;
+  top: -60px;
+  left: -10px;
+}
+
+#fecha2 {
+  display: block;
+  background-color: white ;
+  height: 50px;
+  top: -60px;
+  left: 20px;
+}
+
+
+#ciudad {
+  display: block;
+  background-color: white ;
+  height: 50px;
+  top: -60px;
+  left: -40px;
+}
+
+#buscar {
+  display: flex;
+  top: -240px;
+  left: 452px;
+  width: 400px;
+  margin: 8px 8px 8px 0;
+  text-align: center;
+  justify-content: center;
+}

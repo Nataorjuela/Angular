@@ -1,0 +1,168 @@
+<app-header></app-header>
+
+<div>
+  <div class="container_form">
+    <mat-form-field appearance="fill" id="ciudad">
+      <mat-label>Ciudad</mat-label>
+      <mat-select>
+        <mat-option value="one">Bogotá</mat-option>
+        <mat-option value="two">Medellin</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" id="fecha">
+      <mat-label>Fecha de recogida</mat-label>
+      <input matInput [matDatepicker]="picker" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" id="fecha2">
+      <mat-label>Fecha de entrega</mat-label>
+      <input matInput [matDatepicker]="picker2" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="boton"></div>
+
+  <button
+    mat-fab
+    aria-label="Example icon button with a delete icon"
+    id="search"
+  >
+    <mat-icon color="black">search</mat-icon>
+  </button>
+</div>
+
+<div class="contenedor_buscador">
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Modelo </mat-panel-title>
+      </mat-expansion-panel-header>
+      <section class="example-section">
+        <mat-checkbox class="example-margin">1995 - 2000</mat-checkbox>
+      </section>
+      <section class="example-section">
+        <mat-checkbox class="example-margin">2001 - 2005 </mat-checkbox>
+      </section>
+
+      <section class="example-section">
+        <mat-checkbox class="example-margin">2006 - 2010 </mat-checkbox>
+      </section>
+
+      <section class="example-section">
+        <mat-checkbox class="example-margin">2011 - 2015 </mat-checkbox>
+      </section>
+
+      <section class="example-section">
+        <mat-checkbox class="example-margin">2016 - 2022 </mat-checkbox>
+      </section>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Precio </mat-panel-title>
+      </mat-expansion-panel-header>
+      <section class="example-section">
+        <mat-checkbox class="example-margin">$300.000 - $450.0000</mat-checkbox>
+      </section>
+      <section class="example-section">
+        <mat-checkbox class="example-margin">$450.000 - $550.000 </mat-checkbox>
+      </section>
+
+      <section class="example-section">
+        <mat-checkbox class="example-margin">$550.000 - $800.000 </mat-checkbox>
+      </section>
+
+      <section class="example-section">
+        <mat-checkbox class="example-margin"
+          >$800.000 - $1.000.000
+        </mat-checkbox>
+      </section>
+
+      <section class="example-section">
+        <mat-checkbox class="example-margin"
+          >$1.000.000 - $2.000.000
+        </mat-checkbox>
+      </section>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Capacidad </mat-panel-title>
+      </mat-expansion-panel-header>
+      <section class="example-section">
+        <mat-checkbox class="example-margin">1 - 2 pasajeros</mat-checkbox>
+      </section>
+      <section class="example-section">
+        <mat-checkbox class="example-margin">3 - 5 pasajeros</mat-checkbox>
+      </section>
+
+      <section class="example-section">
+        <mat-checkbox class="example-margin">5 - 8 pasajeros </mat-checkbox>
+      </section>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <mat-accordion>
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title> Confort </mat-panel-title>
+      </mat-expansion-panel-header>
+      <section class="example-section">
+        <mat-checkbox class="example-margin">Regular</mat-checkbox>
+      </section>
+      <section class="example-section">
+        <mat-checkbox class="example-margin">Medio</mat-checkbox>
+      </section>
+
+      <section class="example-section">
+        <mat-checkbox class="example-margin">Alto</mat-checkbox>
+      </section>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+  <div *ngFor="let auto of autos" class="tarjeta">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title> {{ auto.marca }} </mat-card-title>
+        <mat-card-subtitle>{{ auto.id }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="../assets/images/spark.png" alt="Foto spark">
+      <mat-card-content>
+        <p> Capacidad de pasajeros: {{ auto.capacidadPasajeros }}</p>
+        <p> Antiguedad: {{ auto.antiguedad }}</p>
+        <p> Confort:  {{ auto.confort }}</p>
+        <p> Velocidad Máxima: {{ auto.velocidadMax }}</p>
+        <p> Precio de alquiler:  {{ auto.precioAlquiler }}</p>
+        <p> Ciudad:  {{ auto.ciudad }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="openDialog()">Rentar</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+
+</div>
+

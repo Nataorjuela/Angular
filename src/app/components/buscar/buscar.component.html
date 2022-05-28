@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+<div>
+  <div class="container_form">
+
+    <mat-form-field appearance="fill" id="ciudad">
+      <mat-label>Ciudad</mat-label>
+      <mat-select [formControl]="ciudad">
+        <mat-option value="cali">Cali</mat-option>
+        <mat-option value="medellin">Medellin</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" id="fecha">
+      <mat-label>Fecha de recogida</mat-label>
+      <input matInput [matDatepicker]="picker" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" id="fecha2">
+      <mat-label>Fecha de entrega</mat-label>
+      <input matInput [matDatepicker]="picker2" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+
+
+  </div>
+
+
+</div>
+
+
+<button mat-raised-button color="warn" id="buscar"  routerLink="/menu">Buscar</button>
+
+
+

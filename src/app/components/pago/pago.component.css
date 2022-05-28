@@ -1,0 +1,35 @@
+#botonpse{
+    position: absolute;
+    width: 100px;
+    height: 80px;
+    top: 100px;
+    left: 800px;
+  } 
+  
+  
+
+#botonvisa {
+    position: absolute;
+    width: 100px; 
+    height: 50px;
+    top: 100px;
+    left: 400px;
+  }
+  
+  
+#botonmastercard {
+    position: absolute;
+    width: 100px; 
+    height: 60px;
+    top: 100px;
+    left: 600px;
+
+  }
+#pagar{
+    position: absolute;
+    top: 200px;
+    left: 600px;
+    width: 150px; 
+    height: 50px;
+  }
+  

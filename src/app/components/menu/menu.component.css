@@ -1,0 +1,84 @@
+.container_form {
+  position: relative;
+  background-color: #7df110c9;
+  border-radius: 10px;
+  height:15vh;
+  width: 160vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -95px;
+  left: 10px;
+}
+
+.contenedor_buscador {
+  position: relative;
+  height: 15vh;
+  width: 50vh;
+  top: -100px;
+
+}
+
+.mat-expansion-panel-header {
+  background-color: #918282c9;
+  margin: 5px;;
+
+}
+
+
+.boton {
+  position: relative;
+  background-color: #7df110c9;
+  border-radius: 10px;
+  height:15vh;
+  width: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -188px;
+  left: 1030px;
+}
+
+
+.tarjeta {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+}
+
+#ciudad {
+  display: block;
+  background-color: white ;
+  height: 50px;
+  top: -10px;
+  margin: 10px;
+
+
+}
+
+#fecha {
+  display: block;
+  background-color: white ;
+  height: 50px;
+  top: -10px;
+  margin: 10px;
+
+
+}
+
+#fecha2 {
+  display: block;
+  background-color: white ;
+  height: 50px;
+  top: -10px;
+  margin: 10px;
+
+
+}
+
+#search {
+  color: white;
+  background-color: #494040c9;
+  top: -265px;
+  left: 1065px;
+}

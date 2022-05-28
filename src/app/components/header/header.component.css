@@ -1,0 +1,31 @@
+.contenedor {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-auto-rows: 100px;
+  grid-gap: 10px;
+}
+
+.item {
+  font-size: 2rem;
+  display: grid;
+  justify-content: last baseline;
+  align-content: center;
+  margin: 60px;
+}
+
+.item-1 {
+  margin: 10px;
+  border: 1px solid #0e0d0d;
+  background-color: #e2fa08;
+  border-radius: 10px;
+}
+
+.logo {
+  position: relative;
+  top: -95px;
+  left: 1200px;
+}
+
+#icono {
+  border-radius: 1000px;
+}
